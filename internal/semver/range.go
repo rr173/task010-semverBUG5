@@ -183,7 +183,7 @@ func desugar(op, tok string, p partial) (ComparatorSet, error) {
 		}
 		if M == 0 {
 			if m == 0 {
-				return ComparatorSet{mk(">=", 0, 0, pa, pre), mk("<", 0, m+1, 0, nil)}, nil
+				return ComparatorSet{mk(">=", 0, 0, pa, pre), mk("<", 0, 0, pa+1, nil)}, nil
 			}
 			return ComparatorSet{mk(">=", 0, m, pa, pre), mk("<", 0, m+1, 0, nil)}, nil
 		}
